@@ -36,3 +36,32 @@ First we will take a brief look into the steps the flow will take in order to ac
 3. Check if events apply for Automatic Replies
 4. Enable or disable Automatic Replies based on previous checks
 
+### Recurrence
+The `Recurrence` step is automatically created by the [Build a scheduled cloud flow](#build-a-scheduled-cloud-flow).
+
+### Current time
+Add a new `Current time` step.
+
+## Get future time
+Add a new `Get future time` step and configure its interval to `2 Hours`
+
+### Initialize variable (startTime)
+Add a new `Initialize variable` step. Set its name to `startTime` and its type to `String`. Initialize the variable using the `getFutureTime` expression from the `Dynamic content` section and configure the expression accordingly:
+```js
+getFutureTime(1, 'year')
+```
+For better readability you can rename this step to `Initialize startTime`.
+
+### Initialize variable (endTime)
+Add a new `Initialize variable` step. Set name to `endTime` and type to `String`. Initialize the variable using the `getPastTime` expression from the `Dynamic content` section and configure the expression accordingly:
+```js
+getPastTime(1, 'year')
+```
+For better readability you can rename this step to `Initialize endTime`.
+
+### Get calendar view of events (V3)
+Add a new `Get calendar view of events (V3)` step. Select your `Calendar Id` and configure the `Start time` with the `Current time` variable from the  `Dynamic content` section.
+
+Configure the `End time` with the `Future time` variable from the  `Dynamic content` section.
+
+In the `Search` field add `AutoffOffice`
