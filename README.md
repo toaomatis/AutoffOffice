@@ -7,8 +7,21 @@ Head over to [Microsoft Power Automate](https://powerautomate.microsoft.com/) an
 
 ![Power Automate - Sign in](images/pa_sign-in.png)
 
+After a successful login, you will be redirected to the Power Automate landing page. At the left hand side of the screen, you will see the Power Automate main menu.
+
+### Add a connection
+ First we need to set up a Connection so your AutoffOffice flow can interact with Office 365 Outlook.
+
+ From the main menu unfold the `Data` section and click the `Connections` button.
+
+ Press the `New connections` button and select the `Office 365 Outlook` connection.
+
+ Click the `Create` button in the pop-up. You will be redirected to your companies login page. Allow Power Automate to interact with Outlook.
+
+ Your connection is now ready to use.
+
 ### Create a new flow
-After a successful login, you will be redirected to the Power Automate landing page. At the left hand side of the screen, you will see a menu. Click the `Create` button. 
+ Click the `Create` button. 
 
 ![Power Automate - Create](images/pa_create.png)
 
