@@ -27,7 +27,7 @@ You are confronted with a pop-up to build your scheduled cloud flow:
 ![Power Automate - Build a scheduled cloud flow](images/pa_build-a-cloud-flow.png)
 
 ## AutoffOffice flow
-At last, you can build an configure your AutoffOffice flow.
+At last, you can build and configure your AutoffOffice flow.
 
 First we will take a brief look into the steps the flow will take in order to achieve its goal.
 
@@ -42,7 +42,7 @@ The `Recurrence` step is automatically created by the [Build a scheduled cloud f
 ### Current time
 Add a new `Current time` step.
 
-## Get future time
+### Get future time
 Add a new `Get future time` step and configure its interval to `2 Hours`
 
 ### Initialize variable (startTime)
@@ -152,10 +152,29 @@ convertTimeZone(variables('endTime'),'UTC','W. Europe Standard Time','dddd d MMM
 ```
 This will convert and pretty print the `endTime` of your Out of Office event(s) from UTC to my time zone.
 
-See [Microsofts Default Time Zones
-](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11) for your own time zone.
+See [Microsofts Default Time Zones](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11) for your own time zone.
 
 **Remark**
 Localization is currently and unfortunatly not available in Power Automate. Therefore the day and month will be English. 
 
 For better readability you can rename this action to `Schedule Automatic Replies`
+
+### Set up automatic replies (V2) (Disable Automatic Replies)
+Add a new `Set up automatic replies (V2)` action inside the `If no` branch of the [Enable Automatic Replies](#condition-enable-automatic-replies) condition. 
+
+Select `Dsiabled` as `Status` and configure `None` for `External Audience`. Leave all the other text fields empty.
+
+For better readability you can rename this action to `Disable Automatic Replies`
+
+### Finalize
+There is a neat `Flow checker` that will give you an early warning or error in case of faults in your script. 
+
+Finally you'll end up with a flow that looks something like this.
+
+## Run AutoffOffice flow
+After you saved your `AutoffOffice` flow, you can Run it for the first time. This will test whether all variables are initialized and the steps are configured correctly.
+
+Click the `Test` flask in the top right corner and select `Manually` as the `Test Flow`. The `Save & Test` or `Test` button will light up. Click it and press the `Run flow` in the next screen. Your flow will now run.
+
+Afterwards you can review and debug the steps, data and conditions on the `Flow Runs Page`. This will also show historical runs, both scheduled and manual runs. 
+
