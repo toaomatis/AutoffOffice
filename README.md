@@ -1,7 +1,7 @@
 # AutoffOffice
 Microsoft Power Automate scheduled cloud flow to automatically set Automatic Replies in case of Out of Office.
 
-![OutoffOffice logo](images/autoff_office.png)
+![AutoffOffice logo](images/autoff_office.png)
 
 - [AutoffOffice](#autoffoffice)
   - [Power Automate](#power-automate)
@@ -139,7 +139,7 @@ This will create and embody a loop that iterates over all the events fetched in 
 ![Power Automate - Apply to each](images/pa_apply-to-each.png)
 
 ### Condition (Show as Out of Office)
-Inside the [Applty to each](#apply-to-each) click the `Add an action` button and add select `Condition`. Select `Show as` from the `Dynamic content` section as `value` and select `is equal to` as comparator. Finally set `oof` as `value` for the comparison.
+Inside the [Apply to each](#apply-to-each) click the `Add an action` button and add select `Condition`. Select `Show as` from the `Dynamic content` section as `value` and select `is equal to` as comparator. Finally set `oof` as `value` for the comparison.
 
 This will create a junction with a `If yes` and a `If no` flow. The `If no` can be left empty in this `Condition`.
 
@@ -223,7 +223,7 @@ Thank you for your email. At this moment I am Out of Office.<br>
 I expect to be back at @{convertTimeZone(variables('endTime'),'UTC','W. Europe Standard Time','dddd d MMMM yyyy')}.<br>
 Your message will not be forwarded.<br><br>
 Kind regards,<br>
-Mathijs de Kruyf
+Mathijs
 ```
 
 As you can see an `Expression` is used in both the messages:
@@ -236,7 +236,7 @@ See [Microsofts Default Time Zones](https://docs.microsoft.com/en-us/windows-har
 
 **Remark**
 
-Localization is currently and unfortunatly not available in Power Automate. Therefore the day and month will be in English.
+Localization is currently and unfortunately not available in Power Automate. Therefore the day and month will be in English.
 
 For better readability you can rename this action to `Schedule Automatic Replies`
 
@@ -245,7 +245,7 @@ For better readability you can rename this action to `Schedule Automatic Replies
 ### Set up automatic replies (V2) (Disable Automatic Replies)
 Add a new `Set up automatic replies (V2)` action inside the `If no` branch of the [Enable Automatic Replies](#condition-enable-automatic-replies) condition. 
 
-Select `Dsiabled` as `Status` and configure `None` for `External Audience`. Leave all the other text fields empty.
+Select `Disabled` as `Status` and configure `None` for `External Audience`. Leave all the other text fields empty.
 
 For better readability you can rename this action to `Disable Automatic Replies`
 
