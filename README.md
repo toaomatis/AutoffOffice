@@ -222,7 +222,9 @@ For better readability you can rename this action to `Disable Automatic Replies`
 ![Power Automate - Disable Automatic Replies](images/pa_disable-automatic-replies.png)
 
 ### Finalize
-There is a neat `Flow checker` that will give you an early warning or error in case of faults in your script. 
+There is a neat `Flow checker` that will give you an early warning or error in case of faults in your flow. 
+
+![Power Automate - Flow checker](images/pa_flow-checker.png)
 
 Finally you'll end up with a flow that looks something like this.
 
@@ -233,5 +235,23 @@ After you saved your `AutoffOffice` flow, you can Run it for the first time. Thi
 
 Click the `Test` flask in the top right corner and select `Manually` as the `Test Flow`. The `Save & Test` or `Test` button will light up. Click it and press the `Run flow` in the next screen. Your flow will now run.
 
+![Power Automate - Test](images/pa_test.png)
+
 Afterwards you can review and debug the steps, data and conditions on the `Flow Runs Page`. This will also show historical runs, both scheduled and manual runs. 
 
+## Outlook Calendar
+Finally we can add events (Appointments) to our Outlook Calendar for the AutoffOffice flow to pick up.
+
+### Appointments
+In order for the AutoffOffice flow to enable Automatic replies during your absence make sure that Appointments meet the following two criteria:
+1. `Show As` must be set to "Out of Office". This is configured in step [Condition (Show as Out of Office)](#condition-show-as-out-of-office).
+2. Either the `subject` (Title) or `body` of the Appointment must contain the word `AutoffOffice`. This is configured in step [Get calendar view of events (V3)](#get-calendar-view-of-events-v3) in the `Search` field.
+
+When these two criteria are met, the AutoffOffice flow will schedule an Automatic Reply during the length of the Appointment.
+
+In case there are multiple and/or overlapping Appointments within the given time frame, the earliest `Start Time` and latest `End Time` will be used when scheduling the Automatic Replies.
+
+## Contributing
+This Microsoft Power Automate flow is a "Works for me" solution to provide automatic scheduling of dynamic Automatic Replies in case of Out of Office.
+
+When you spot a bug, optimization, typo or run into problems setting up your own flow: Raise an [Issue](https://github.com/toaomatis/AutoffOffice/issues) or create a [Pull request](https://github.com/toaomatis/AutoffOffice/pulls).
