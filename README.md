@@ -1,6 +1,8 @@
 # AutoffOffice
 Microsoft Power Automate scheduled cloud flow to automatically set Automatic Replies in case of Out of Office.
 
+![OutoffOffice logo](images/autoff_office.png)
+
 - [AutoffOffice](#autoffoffice)
   - [Power Automate](#power-automate)
     - [Sign in](#sign-in)
