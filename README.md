@@ -1,6 +1,34 @@
 # AutoffOffice
 Microsoft Power Automate scheduled cloud flow to automatically set Automatic Replies in case of Out of Office.
 
+- [AutoffOffice](#autoffoffice)
+  - [Power Automate](#power-automate)
+    - [Sign in](#sign-in)
+    - [Add a connection](#add-a-connection)
+    - [Create a new flow](#create-a-new-flow)
+    - [Build a scheduled cloud flow](#build-a-scheduled-cloud-flow)
+  - [AutoffOffice flow](#autoffoffice-flow)
+    - [Recurrence](#recurrence)
+    - [Current time](#current-time)
+    - [Get future time](#get-future-time)
+    - [Initialize variable (startTime)](#initialize-variable-starttime)
+    - [Initialize variable (endTime)](#initialize-variable-endtime)
+    - [Get calendar view of events (V3)](#get-calendar-view-of-events-v3)
+    - [Apply to each](#apply-to-each)
+    - [Condition (Show as Out of Office)](#condition-show-as-out-of-office)
+    - [Condition (Minimize startTime)](#condition-minimize-starttime)
+    - [Set variable (Set startTime with Start time)](#set-variable-set-starttime-with-start-time)
+    - [Condition (Maximize endTime)](#condition-maximize-endtime)
+    - [Set variable (Set endTime with End time)](#set-variable-set-endtime-with-end-time)
+    - [Condition (Enable Automatic Replies)](#condition-enable-automatic-replies)
+    - [Set up automatic replies (V2) (Schedule Automatic Replies)](#set-up-automatic-replies-v2-schedule-automatic-replies)
+    - [Set up automatic replies (V2) (Disable Automatic Replies)](#set-up-automatic-replies-v2-disable-automatic-replies)
+    - [Finalize](#finalize)
+  - [Run AutoffOffice flow](#run-autoffoffice-flow)
+  - [Outlook Calendar](#outlook-calendar)
+    - [Appointments](#appointments)
+  - [Contributing](#contributing)
+
 ## Power Automate
 ### Sign in
 Head over to [Microsoft Power Automate](https://powerautomate.microsoft.com/) and click `Sign in` in the top right corner. This will take you to your companies sign in page.
