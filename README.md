@@ -224,6 +224,8 @@ For better readability you can rename this action to `Disable Automatic Replies`
 ### Finalize
 There is a neat `Flow checker` that will give you an early warning or error in case of faults in your script. 
 
+![Power Automate - Flow checker](images/pa_flow-checker.png)
+
 Finally you'll end up with a flow that looks something like this.
 
 ![Power Automate - Final flow](images/pa_final-flow.png)
@@ -233,5 +235,8 @@ After you saved your `AutoffOffice` flow, you can Run it for the first time. Thi
 
 Click the `Test` flask in the top right corner and select `Manually` as the `Test Flow`. The `Save & Test` or `Test` button will light up. Click it and press the `Run flow` in the next screen. Your flow will now run.
 
+![Power Automate - Test](images/pa_test.png)
+
 Afterwards you can review and debug the steps, data and conditions on the `Flow Runs Page`. This will also show historical runs, both scheduled and manual runs. 
 
+## Outlook
