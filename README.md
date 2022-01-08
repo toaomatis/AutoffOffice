@@ -244,8 +244,8 @@ Finally we can add events (Appointments) to our Outlook Calendar for the AutoffO
 
 ### Appointments
 In order for the AutoffOffice flow to enable Automatic replies during your absence make sure that Appointments meet the following two criteria:
-1. Show As must be set to "Out of Office". This is configured in step [Condition (Show as Out of Office)](#condition-show-as-out-of-office).
-2. Either the subject (Title) or body of the Appointment must contain the word `AutoffOffice`. This is configured in step [Get calendar view of events (V3)](#get-calendar-view-of-events-v3) under the `Search` step.
+1. `Show As` must be set to "Out of Office". This is configured in step [Condition (Show as Out of Office)](#condition-show-as-out-of-office).
+2. Either the `subject` (Title) or `body` of the Appointment must contain the word `AutoffOffice`. This is configured in step [Get calendar view of events (V3)](#get-calendar-view-of-events-v3) in the `Search` field.
 
 When these two criteria are met, the AutoffOffice flow will schedule an Automatic Reply during the length of the Appointment.
 
