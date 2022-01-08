@@ -222,7 +222,7 @@ For better readability you can rename this action to `Disable Automatic Replies`
 ![Power Automate - Disable Automatic Replies](images/pa_disable-automatic-replies.png)
 
 ### Finalize
-There is a neat `Flow checker` that will give you an early warning or error in case of faults in your script. 
+There is a neat `Flow checker` that will give you an early warning or error in case of faults in your flow. 
 
 ![Power Automate - Flow checker](images/pa_flow-checker.png)
 
