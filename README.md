@@ -284,4 +284,4 @@ In case there are multiple and/or overlapping Appointments within the given time
 ## Contributing
 This Microsoft Power Automate flow is a "Works for me" solution to provide automatic scheduling of dynamic Automatic Replies in case of Out of Office.
 
-As of June 29th 2023 this repository is *Archived*, so contributing is not possible anymore. 
+As of *June 29th 2023* this repository is **Archived**, so contributing is not possible anymore. 
